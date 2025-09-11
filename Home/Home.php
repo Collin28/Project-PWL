@@ -9,7 +9,7 @@
   <!-- Header -->
   <header class="navbar">   
     <div class="navbar-left">
-      <img src="/images/ABTEND.png" class="logo">
+      <img src="../images/ABTEND.png" class="logo">
       
       <nav class="menu">
         <a href="Home.html">Home</a>
@@ -18,7 +18,7 @@
     </div>
 
     <div class="navbar-right">
-      <img src="/images/profile.jpg" class="profile-pic">
+      <img src="../images/profile.jpg" class="profile-pic">
       <button class="logout-btn">Logout</button>
     </div>
   </header>
