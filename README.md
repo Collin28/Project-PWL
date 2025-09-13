@@ -22,14 +22,20 @@
 Feature explanation:
 
 Teacher:
+Verification:
+Enter their ID or face ID into the website so they can check their attendance.
+
 Home page:
 On the home page, teachers can see who is present, late, or absent, and can select a class. There is a chart showing student attendance percentages.
+
 Recap:
 Teachers can see when students are present and when they are leaving, absent, or late, and can follow up on students who are late or absent.
+
 
 Students:
 Verification:
 Enter their ID or face ID into the website so they can check their attendance.
+
 Home/Recap:
 Students can see when they are coming in and when they are leaving.
 Attendance types are automatically filled in: absent, present, or late.
