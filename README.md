@@ -66,3 +66,4 @@ Wait for review, suggestions, and approval before merging.
 
 
 ## 📜 License
+This Repository License is Using Apache license 2.0.
