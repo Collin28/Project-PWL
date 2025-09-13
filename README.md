@@ -15,9 +15,11 @@
 ## 🖥️ Usage
 1. Go to your Visual Studio Code (Or your Code editor apps) and open the folder.
 
-2. Run the website by opening http://localhost/<Folder Name>
+2. start the local development sofware (laragon,xxamp,etc)
 
-3. You access the project now!!
+3. Run the website by opening http://localhost/<Folder Name>
+
+4. You access the project now!!
 
 Feature explanation:
 
