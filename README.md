@@ -74,3 +74,9 @@ Wait for review, suggestions, and approval before merging.
 
 ## 📜 License
 This Repository License is Using Apache license 2.0.
+
+## 👥 Team Members
+1. Collin Lee
+2. Daniel Alexander
+3. Grachia Freesella
+4. Yones
