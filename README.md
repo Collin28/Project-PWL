@@ -22,6 +22,7 @@
 Feature explanation:
 
 Teacher:
+
 Verification:
 Enter their ID or face ID into the website so they can check their attendance.
 
@@ -33,6 +34,7 @@ Teachers can see when students are present and when they are leaving, absent, or
 
 
 Students:
+
 Verification:
 Enter their ID or face ID into the website so they can check their attendance.
 
