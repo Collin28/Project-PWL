@@ -1,5 +1,5 @@
 # ABTEND
-
+Abtend is our innovative project designed to provide a seamless online attendance system for schools. The primary objective of Abtend is to streamline and simplify the traditional attendance process, making it more efficient and user-friendly for educational institutions.
 
 ## ⚙️ Installation
 1. Clone this repository:
