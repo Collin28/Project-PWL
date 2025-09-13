@@ -11,7 +11,7 @@
   <!-- Header -->
   <header class="navbar">
     <div class="navbar-left">
-      <img src="../images/ABTEND.png" class="logo">
+      <img src="../../images/ABTEND.png" class="logo">
       
       <nav class="menu">
         <a href="Home.html">Home</a>
@@ -19,7 +19,7 @@
       </nav>
     </div>
     <div class="navbar-right">
-      <img src="../images/profile.jpg" alt="Profile" class="profile-pic">
+      <img src="../../images/profile.jpg" alt="Profile" class="profile-pic">
       <button class="logout-btn">Logout</button>
     </div>
   </header>
@@ -52,27 +52,27 @@
           <tr>
             <td>26 Agustus 2025</td>
             <td>-</td>
-            <td class="absen"> x Tidak Hadir</td>
+            <td class="absen"> X Tidak Hadir</td>
           </tr>
           <tr>
             <td>26 Agustus 2025</td>
             <td>-</td>
-            <td class="absen">❌ Tidak Hadir</td>
+            <td class="absen"> X Tidak Hadir</td>
           </tr>
           <tr>
             <td>26 Agustus 2025</td>
             <td>-</td>
-            <td class="absen">❌ Tidak Hadir</td>
+            <td class="absen"> X Tidak Hadir</td>
           </tr>
           <tr>
             <td>26 Agustus 2025</td>
             <td>-</td>
-            <td class="absen">❌ Tidak Hadir</td>
+            <td class="absen"> X Tidak Hadir</td>
           </tr>
           <tr>
             <td>26 Agustus 2025</td>
             <td>-</td>
-            <td class="absen">❌ Tidak Hadir</td>
+            <td class="absen"> X Tidak Hadir</td>
           </tr>
         </tbody>
       </table>

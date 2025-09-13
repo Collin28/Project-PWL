@@ -14,7 +14,7 @@
 </head>
 <body>
   <div class="logo">
-    <img src="ABTEND.png">
+    <img src="../images/ABTEND.png">
   </div>
   
   <div class="container">

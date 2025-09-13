@@ -47,7 +47,7 @@
     <div class="container-icon">
 
         <div class="logo">
-            <img src="./images/ABTEND.png" alt="">
+            <img src="../images/ABTEND.png" alt="">
         </div>
 
 
