@@ -41,7 +41,20 @@ Students can also see how many days they are present, late, or absent. At the bo
 
 
 ## 🤝 Contribution
+We welcome contributions from anyone who wants to make ABTEND better!
+Whether you’re fixing bugs, adding new features, improving the UI, or enhancing documentation, every contribution is valuable and appreciated.
 
+How to Contribute
+
+Fork this repository.
+
+Create a new branch for your feature or bug fix.
+
+Commit your changes with a clear and descriptive message.
+
+Push your branch and submit a Pull Request.
+
+Wait for review, suggestions, and approval before merging.
 
 
 ## 📜 License
