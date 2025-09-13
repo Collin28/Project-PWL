@@ -61,15 +61,15 @@ Whether you’re fixing bugs, adding new features, improving the UI, or enhancin
 
 How to Contribute
 
-Fork this repository.
+1. Fork this repository.
 
-Create a new branch for your feature or bug fix.
+2. Create a new branch for your feature or bug fix.
 
-Commit your changes with a clear and descriptive message.
+3. Commit your changes with a clear and descriptive message.
 
-Push your branch and submit a Pull Request.
+4. Push your branch and submit a Pull Request.
 
-Wait for review, suggestions, and approval before merging.
+5. Wait for review, suggestions, and approval before merging.
 
 
 ## 📜 License
