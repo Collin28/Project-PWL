@@ -47,9 +47,14 @@ Students can also see how many days they are present, late, or absent. At the bo
 
 
 ## 🏗️ Architecture
-
-
-
+```
+PROJECT PWL/
+├── index.html # Main HTML file
+├── style.css # CSS for styling
+├── script.js # JavaScript functionality
+├── README.md # Project documentation
+├── images/ # Store images here
+```
 ## 🤝 Contribution
 We welcome contributions from anyone who wants to make ABTEND better!
 Whether you’re fixing bugs, adding new features, improving the UI, or enhancing documentation, every contribution is valuable and appreciated.
