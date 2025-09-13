@@ -13,7 +13,13 @@
 
 
 ## 🖥️ Usage
+1. Run the website by opening http://localhost/login
 
+2. Login as Student/Teacher to access the dashboard.
+
+3. Students can check in by entering their Attendance ID.
+
+4. Attendance data will be automatically saved and displayed in the dashboard.
 
 
 ## 🏗️ Architecture
