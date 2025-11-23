@@ -1,0 +1,176 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #fff7ed, #ffffff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.login-container {
+  display: flex;
+  max-width: 900px;
+  width: 100%;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  overflow: hidden;
+  
+}
+
+.left-section {
+  flex: 1;
+  background-color: #ffb669; 
+  color: white;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 60px;
+
+}
+
+.logo {
+    display: flex;
+}
+.logo img {
+  position: absolute;
+  max-width: 450px;
+  width: 500px;
+  height: auto;
+  margin-top: -100px;
+  margin-left: -210px;
+  
+}
+
+.left-section .brand {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+
+
+.left-section h2 {
+    margin-top: 200px;
+    margin-bottom: 0px;
+}
+
+.left-section p {
+  font-size: 0.95rem;
+  max-width: 300px;
+}
+
+.right-section {
+  flex: 1;
+  padding: 40px;
+}
+
+.right-section h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #f97316;
+}
+
+.small-text {
+  font-size: 0.9rem;
+  margin: 5px 0 20px;
+}
+
+.small-text a {
+  color: #f97316;
+  text-decoration: none;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #fcd9b6;
+  border-radius: 8px;
+  outline: none;
+}
+
+form input:focus {
+  border-color: #f97316;
+}
+
+form select {
+  width: 106%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #fcd9b6;
+  border-radius: 8px;
+  appearance: none; 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: white url('data:image/svg+xml;utf8,<svg fill="%23f97316" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 10px center;
+  outline: none;
+  background-color: white;
+  color: #555;
+}
+
+form select:focus {
+  border-color: #f97316;
+}
+
+form select option {
+  background-color: #fffaf5; 
+  color: #f97316; 
+}
+
+form select option:hover {
+  background-color: #fde2c6; 
+}
+
+
+.remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  margin-bottom: -200px;
+}
+
+.remember-forgot a {
+  color: #f97316;
+  text-decoration: none;
+  margin-top: 5px;
+}
+
+.remember-forgot label {
+    margin-top: 5px;
+    gap: 5px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+#remember {
+    margin-top: 10px;
+}
+
+button {
+  width: 105%;
+  padding: 12px;
+  background-color: #f97316;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+button:hover {
+  background-color: #ea580c;
+}
+
+.message {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: -20px;
+}

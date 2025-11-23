@@ -1,3 +1,34 @@
+<?php
+      session_start();
+
+      $user = $_SESSION['user'];
+
+      require_once '../../DataBase/db-connection.php';
+
+      if(!isset($_SESSION['user'])){
+    header("Location: ../Loginpage/loginpage.php");
+    exit();
+}
+
+$user = $_SESSION['user'];
+$email = $user['email'];
+
+$sqlToday = "SELECT * FROM attendance WHERE email='$email' AND DATE(waktu_masuk)=CURDATE()";
+$resultToday = mysqli_query($db, $sqlToday);
+$dataToday = mysqli_fetch_assoc($resultToday);
+
+$sqlHadir = "SELECT COUNT(*) AS total_hadir FROM attendance WHERE email='$email' AND status='Hadir'";
+$resultHadir = mysqli_fetch_assoc(mysqli_query($db, $sqlHadir));
+
+$sqlTelat = "SELECT COUNT(*) AS total_telat FROM attendance WHERE email='$email' AND status='Terlambat'";
+$resultTelat = mysqli_fetch_assoc(mysqli_query($db, $sqlTelat));
+
+$statusColor = ''; 
+if ($dataToday) {
+    $statusColor = ($dataToday['status'] == 'Hadir') ? 'green' : 'red';
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,20 +43,20 @@
       <img src="../../images/ABTEND.png" class="logo">
       
       <nav class="menu">
-        <a href="Home.html">Home</a>
-        <a href="Rekap.html">Rekap</a>
+        <a href="Home.php">Home</a>
+        <a href="../Rekap/Rekap.php">Rekap</a>
       </nav>
     </div>
 
     <div class="navbar-right">
       <img src="../../images/profile.jpg" class="profile-pic">
-      <button class="logout-btn">Logout</button>
+      <a href="../../Logout/Logout.php"><button class="logout-btn">Logout</button></a>
     </div>
   </header>
 
   <!-- Welcome -->
  <section class="welcome">
-  <h2>Halo, Collin 👋</h2>
+  <h2>Halo, <strong> <?= $user['name']; ?> </strong> 👋</h2>
   <p id="date"></p>
   <p id="time" class="time"></p>
 </section>
@@ -35,45 +66,41 @@
   <div class="card">
     <div class="icon green">✔</div>
     <p>Status Hari Ini</p>
-    <span id="statusHariIni" class="highlight green">-</span>
+    <span id="statusHariIni" class="highlight <?= $statusColor ?>">
+    <?= $dataToday ? $dataToday['status'] : '-' ?>
+    </span>
   </div>
+
   <div class="card">
     <div class="icon blue">⏰</div>
     <p>Jam Masuk</p>
-    <span id="jamMasuk">-</span>
+    <span id="jamMasuk">
+      <?= $dataToday ? date('H:i:s', strtotime($dataToday['waktu_masuk'])) : '-' ?>
+    </span>
   </div>
+
   <div class="card">
     <div class="icon red">⏻</div>
     <p>Jam Pulang</p>
-    <span id="jamPulang">-</span>
+    <span id="jamPulang">14:35</span>
   </div>
 </section>
 
 <section class="stats">
   <div class="stat">
     <p>Hadir</p>
-    <span id="hadir" class="green">0 Hari</span>
+    <span id="hadir" class="green">
+      <?= $resultHadir['total_hadir'] ?> Hari
+    </span>
   </div>
-  <div class="stat">
-    <p>Izin</p>
-    <span id="izin" class="yellow">0 Hari</span>
-  </div>
+
   <div class="stat">
     <p>Terlambat</p>
-    <span id="terlambat" class="red">0 Hari</span>
+    <span id="terlambat" class="red">
+      <?= $resultTelat['total_telat'] ?> Hari
+    </span>
   </div>
 </section>
-
-
-  <!-- Pengumuman -->
-  <section class="announcement">
-    <div class="icon orange">📢</div>
-    <div>
-      <h3>Pengumuman</h3>
-      <p>Rapat koordinasi akan diadakan besok pukul 10:00 WIB di ruang rapat utama.</p>
-    </div>
-  </section>
-
 
 <script src="Home.js"></script>
 </body>

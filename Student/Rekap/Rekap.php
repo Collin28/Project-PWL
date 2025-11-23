@@ -1,3 +1,22 @@
+<?php
+session_start();
+require_once '../../DataBase/db-connection.php';
+
+if(!isset($_SESSION['user'])){
+    header("Location: ../Login/loginpage.php");
+    exit();
+}
+
+
+
+
+$user = $_SESSION['user'];
+$email = $user['email'];
+
+$sql = "SELECT DATE(waktu_masuk) AS tanggal, TIME(waktu_masuk) AS jam, status FROM attendance WHERE email='$email' ORDER BY waktu_masuk DESC";
+$result = mysqli_query($db, $sql);
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -14,13 +33,14 @@
       <img src="../../images/ABTEND.png" class="logo">
       
       <nav class="menu">
-        <a href="Home.html">Home</a>
-        <a href="Rekap.html">Rekap</a>
+        <a href="../Home/Home.php">Home</a>
+        <a href="Rekap.php">Rekap</a>
       </nav>
     </div>
     <div class="navbar-right">
       <img src="../../images/profile.jpg" alt="Profile" class="profile-pic">
-      <button class="logout-btn">Logout</button>
+      <a href="../../Logout/Logout.php"><button class="logout-btn">Logout</button></a>
+    </div>
     </div>
   </header>
 
@@ -39,41 +59,31 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>28 Agustus 2025</td>
-            <td>07:45</td>
-            <td class="hadir"> ✔ Hadir</td>
-          </tr>
-          <tr>
-            <td>27 Agustus 2025</td>
-            <td>07:50</td>
-            <td class="hadir"> ✔ Hadir</td>
-          </tr>
-          <tr>
-            <td>26 Agustus 2025</td>
-            <td>-</td>
-            <td class="absen"> X Tidak Hadir</td>
-          </tr>
-          <tr>
-            <td>26 Agustus 2025</td>
-            <td>-</td>
-            <td class="absen"> X Tidak Hadir</td>
-          </tr>
-          <tr>
-            <td>26 Agustus 2025</td>
-            <td>-</td>
-            <td class="absen"> X Tidak Hadir</td>
-          </tr>
-          <tr>
-            <td>26 Agustus 2025</td>
-            <td>-</td>
-            <td class="absen"> X Tidak Hadir</td>
-          </tr>
-          <tr>
-            <td>26 Agustus 2025</td>
-            <td>-</td>
-            <td class="absen"> X Tidak Hadir</td>
-          </tr>
+          <?php
+          if (mysqli_num_rows($result) > 0) {
+              while ($row = mysqli_fetch_assoc($result)) {
+
+                  $tanggal = date('d F Y', strtotime($row['tanggal']));
+                  $jam = $row['jam'];
+                  $status = $row['status'];
+
+                  if ($status == 'Hadir') {
+                      echo "<tr>
+                              <td>$tanggal</td>
+                              <td>$jam</td>
+                              <td class='hadir'>Hadir</td>
+                            </tr>";
+
+                  } elseif ($status == 'Terlambat') {
+                      echo "<tr>
+                              <td>$tanggal</td>
+                              <td>$jam</td>
+                              <td class='absen'>Terlambat</td>
+                            </tr>";
+                  }
+              }
+          }
+          ?>
         </tbody>
       </table>
     </div>
