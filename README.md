@@ -72,6 +72,56 @@ How to Contribute
 
 5. Wait for review, suggestions, and approval before merging.
 
+## Entitiy
+
+1. Student
+- Student_ID
+- Class
+- Email
+- Name
+
+2. Admin
+- Admin_ID
+- Position
+- Name
+- Users_ID
+
+3. Attendance
+- Attendance_ID
+- Student_ID
+- Date
+- Check-in_Time
+- Status
+
+4. Users
+- Users_ID
+- Name
+- Password
+- Role
+
+
+## Main Feature 
+Abtend is a digital attendance platform designed with one main feature: automatic attendance report recording. With our system, every step of the attendance process from checking in to generating reports is stored digitally, safely, and without the risk of losing data.
+With Abtend, students can mark their attendance quickly, and teachers receive complete reports without doing manual work. It’s simple, efficient, and secure.
+
+## Database Setup
+
+1.Download the abtend.sql file.
+
+2.Open Laragon.
+
+3.Log in to phpmyadmin.
+
+4.Create new database abtend(can be another name).
+
+5.After create new database go to import.
+
+6.Search File to import and choose abtend.sql file.
+
+7.After select the abtend.sql file select.
+
+8.And the database is already available.
+
 ## 📜 License
 This Repository License is Using Apache license 2.0.
 
